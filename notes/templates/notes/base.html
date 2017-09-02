@@ -4,19 +4,11 @@
   <head>
     <meta charset="utf-8">
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <title>NotesApp</title>
+    <link rel="stylesheet" href="{% static 'css/notes.css' %}">
+    <title>Notes</title>
   </head>
   <body>
-    <div class="page-header">
-    </div>
-    <div class="content container">
-      <div class="row">
-        <div class="col-md-8">
-        {% block content %}
-        {% endblock %}
-        </div>
-      </div>
-    </div>
+    {% block content %}
+    {% endblock %}
   </body>
 </html>

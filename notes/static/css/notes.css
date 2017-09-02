@@ -1,0 +1,372 @@
+:root {
+  --green-blue: #b7fff6;
+  --button-h-w: 40px;
+  --s-button-h-w: 30px;
+  --font: 20px;
+}
+
+body {
+  background: url('backgrounds/brooke-lark.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+}
+
+.top-bar {
+  display: flex;
+  margin: 20px 0 0 20px;
+  justify-content: space-between;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.new-note-button {
+  width: var(--button-h-w);
+  height: var(--button-h-w);
+  font-size: 2.5em;
+  margin: 0 30px 0 0;
+  background-color: #b7fff6;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow .25s ease-in-out;
+}
+
+.new-note-button:hover {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .1);
+  transition: box-shadow .25s ease-in-out;
+}
+
+.colors {
+  cursor: default;
+}
+
+.no-margin {
+  margin: 0;
+  position: absolute;
+  bottom: 0px;
+}
+
+.choose-main {
+  background-color: var(--green-blue);
+}
+
+.choose-yellow {
+  background-color: #fdffaa;
+}
+
+.choose-green {
+  background-color: #a0ffdd;
+}
+
+.choose-pink {
+  background-color: #fddbff;
+}
+
+.choose-blue {
+  background-color: #b5dbff;
+}
+
+.choose-purple {
+  background-color: #e4b7ff;
+}
+
+.choose-main:hover {
+  background-color: #84ffee;
+}
+
+.choose-yellow:hover {
+  background-color: #FCFF79;
+}
+
+.choose-green:hover {
+  background-color: #71FFCD;
+}
+
+.choose-pink:hover {
+  background-color: #F9A1FF;
+}
+
+.choose-blue:hover {
+  background-color: #87C4FF;
+}
+
+.choose-purple:hover {
+  background-color: #D388FF;
+}
+
+.color-picker {
+  width: var(--s-button-h-w);
+  height: var(--s-button-h-w);
+  margin: 0 3px;
+  border: none;
+  border-radius: 10px;
+}
+
+.color-picker:hover {
+  transition: background-color .25s;
+}
+
+.hamburger {
+  width: var(--button-h-w);
+  height: var(--button-h-w);
+  margin: 8px 15px 0 0;
+  font-size: var(--font);
+  background-color: var(--green-blue);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow .25s ease-in-out;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.hamburger:hover {
+box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .1);
+transition: box-shadow .25s ease-in-out;
+}
+
+.new-note-button, .hamburger {
+  transition: background-color 2s;
+}
+
+#notes-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.note {
+  width: 21%;
+  height: 230px;
+  margin: 2%;
+  background-color: var(--green-blue);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: background-color 2s;
+}
+
+.note:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.button-holder {
+  float: right;
+  margin: 2px;
+}
+
+.x-button {
+  font-size: var(--font);
+  background-color: Transparent;
+  border: none;
+  float: right;
+}
+
+span {
+  width: 90%;
+  height: 85%;
+  margin: 2px 4%;
+  display: block;
+  overflow: auto;
+  cursor: text;
+}
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+}
+
+[contenteditable]:focus {
+  outline: 0px solid transparent;
+}
+
+.choose-background {
+  height: 100vh;
+  margin-bottom: 10px;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: auto;
+  background-color: #E1FFF4;
+  flex-direction: column;
+  transition: display 10s;
+}
+
+.close-background {
+  width: var(--s-button-h-w);
+  height: var(--s-button-h-w);
+  margin: 3px 10px 0 10px;
+  line-height: 10px;
+  font-size: var(--font);
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: Transparent;
+  text-align: center;
+  align-content: center;
+  justify-content: flex-end;
+  position: relative;
+  left: 125px;
+  top: 3px;
+  transition: background-color .5s ease-in-out;
+}
+
+.close-background:hover {
+  background-color: var(--green-blue);
+}
+
+.background-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.background-img {
+  width: 150px;
+  height: 110px;
+  margin: 10px 10px 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.background-img:hover {
+  opacity: .75;
+}
+
+.background-img:last-child {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .note {
+    width: 46%;
+    margin: 2%;
+  }
+
+  .x-button {
+    left: 93%;
+  }
+}
+
+@media (max-width: 800px) {
+  .x-button {
+    left: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .note {
+    width: 95%;
+    margin: 2.5%;
+  }
+}
+
+@media (max-width: 370px) {
+  .left-section {
+    flex-direction: column;
+  }
+
+  .new-note-button {
+    left: -60px;
+  }
+
+  .colors {
+    margin-top: 1em;
+  }
+
+  .background-div {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: -52px;
+    left: -50px;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  body {
+    height: 100vh;
+  }
+
+  .top-bar {
+    margin: 2em 0 0 2em;
+  }
+
+  .new-note-button {
+    font-size: 7em;
+  }
+
+  .new-note-button, .hamburger {
+    width: 120px;
+    height: 120px;
+    position: relative;
+  }
+
+  .hamburger {
+    font-size: 4em;
+  }
+
+  .no-margin {
+    margin: 0;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .color-picker {
+    width: 80px;
+    height: 80px;
+    border-radius: 2.5em;
+    margin: 0.5em;
+  }
+
+  #notes-section {
+    margin-top: 2em;
+  }
+
+  .note {
+    width: 93%;
+    height: 13em;
+    margin: 3.5%;
+    font-size: 3em;
+  }
+
+  .x-button {
+    font-size: 55px;
+    margin: .1em .2em 0 0;
+  }
+
+  .close-background {
+    display: none;
+  }
+
+  .background-img {
+    width: 30em;
+    height: 22em;
+    margin: 2em 2em 0 2em;
+  }
+
+  .background-img:last-child {
+    margin-bottom: 2em;
+  }
+}

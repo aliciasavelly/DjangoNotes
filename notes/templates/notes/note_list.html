@@ -1,3 +1,44 @@
-<html>
-  <p>it works!</p>
-</html>
+{% load staticfiles %}
+
+<div class="top-bar">
+  <div class="left-section">
+    <button onClick="newNote()" class="new-note-button"><p class="no-margin">+</p></button>
+    <div class="colors">
+      <button class="choose-main color-picker" onClick="changeNoteColor('#b7fff6')"></button>
+      <button class="choose-yellow color-picker" onClick="changeNoteColor('#fdffaa')"></button>
+      <button class="choose-green color-picker" onClick="changeNoteColor('#a0ffdd')"></button>
+      <button class="choose-pink color-picker" onClick="changeNoteColor('#fddbff')"></button>
+      <button class="choose-blue color-picker" onClick="changeNoteColor('#b5dbff')"></button>
+      <button class="choose-purple color-picker" onClick="changeNoteColor('#e4b7ff')"></button>
+    </div>
+  </div>
+
+  <div class="background-div">
+    <button class="hamburger" onClick="openBackgroundSection()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+  </div>
+</div>
+
+<div id="notes-section">
+  <div id="note-0" class="note">
+    <div class="button-holder">
+      <button id="0" type="button" name="button" class="x-button" onClick="deleteNote(`note-${this.id}`)">X</button>
+    </div>
+    <span id="span-0" placeholder="Type here..." onClick="removePlaceholder(this.id)" contenteditable="true"></span>
+  </div>
+</div>
+
+<div class="choose-background">
+  <div class="close-background-div">
+    <button onClick="closeBackgroundSection()" class="close-background">X</button>
+  </div>
+  <div class="background-images">
+    <img onClick="changeBackground(this.src)" class="background-img" src="{% static "images/brooke-lark.jpg" %}">
+    <img onClick="changeBackground(this.src)" class="background-img" src="{% static "images/tim-mossholder.jpg" %}">
+    <img onClick="changeBackground(this.src)" class="background-img" src="{% static "images/jakub-kapusnak.jpg" %}">
+    <img onClick="changeBackground(this.src)" class="background-img" src="{% static "images/leonardo-wong.jpg" %}">
+    <img onClick="changeBackground(this.src)" class="background-img" src="{% static "images/michael-depetris.jpg" %}">
+    <img onClick="changeBackground(this.src)" class="background-img" src="{% static "images/cam-adams.jpg" %}">
+    <img onClick="changeBackground(this.src)" class="background-img" src="{% static "images/raphael-biscaldi.jpg" %}">
+    <img onClick="changeBackground(this.src)" class="background-img" src="{% static "images/brandi-redd.jpg" %}">
+  </div>
+</div>
