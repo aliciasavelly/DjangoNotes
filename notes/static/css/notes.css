@@ -299,6 +299,10 @@ span {
   transition: 1s;
 }
 
+.login-page input:focus {
+  outline: none;
+}
+
 #id_username, #id_password {
   padding: 10px;
   border-radius: 3px;
