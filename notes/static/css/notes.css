@@ -307,6 +307,36 @@ span {
   font-size: 13px;
 }
 
+.line {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+
+.line hr {
+  width: 75px;
+  color: black;
+  /*display: block;
+  -webkit-margin-before: 0.5em;
+  -webkit-margin-after: 0.5em;
+  -webkit-margin-start: auto;
+  -webkit-margin-end: auto;
+  border-style: inset;
+  border-width: 1px;*/
+  /*margin-left: auto;
+  margin-right: auto;*/
+  background: black;
+  border: 0px;
+}
+
+.line hr:first-of-type {
+  float: left;
+}
+
+.line hr:last-of-type {
+  float: right;
+}
+
 @media (max-width: 900px) {
   .note {
     width: 46%;
