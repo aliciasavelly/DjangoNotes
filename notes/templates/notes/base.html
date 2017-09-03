@@ -13,12 +13,14 @@
 
     <script type="text/javascript">
       $(document).ready(function() {
-        document.getElementById("id_username").setAttribute("placeholder", "Username");
-        document.getElementById("id_password").setAttribute("placeholder", "Password");
+        if (document.getElementById("id_username")) {
+          document.getElementById("id_username").setAttribute("placeholder", "Username");
+          document.getElementById("id_password").setAttribute("placeholder", "Password");
 
-        let labels = document.getElementById("login-page").getElementsByTagName("label");
-        labels[0].innerHTML = "";
-        labels[1].innerHTML = "";
+          let labels = document.getElementById("login-page").getElementsByTagName("label");
+          labels[0].innerHTML = "";
+          labels[1].innerHTML = "";
+        }
       });
     </script>
   </head>
