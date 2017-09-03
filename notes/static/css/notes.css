@@ -287,13 +287,20 @@ span {
 }
 
 .login-page p {
-  margin: 0px;
-  background: blue;
+  margin: 0 0 10px 0;
 }
 
 .login-page button:hover {
   background: #00F2D1;
   transition: 1s;
+}
+
+#id_username, #id_password {
+  padding: 10px;
+  border-radius: 3px;
+  border: 0px;
+  width: 175px;
+  font-size: 13px;
 }
 
 @media (max-width: 900px) {
