@@ -181,6 +181,11 @@ transition: box-shadow .25s ease-in-out;
   float: right;
 }
 
+.background-div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 span {
   width: 90%;
   height: 85%;
@@ -326,6 +331,10 @@ span {
   outline: none;
 }
 
+.username {
+  margin-right: 10px;
+}
+
 #id_username, #id_password {
   padding: 12px;
   border-radius: 3px;
@@ -378,6 +387,10 @@ span {
     width: 95%;
     margin: 2.5%;
   }
+
+  .username {
+    display: none;
+  }
 }
 
 @media (max-width: 370px) {
@@ -395,6 +408,7 @@ span {
 
   .background-div {
     position: relative;
+    /*display: block;*/
   }
 
   .hamburger {
@@ -407,6 +421,10 @@ span {
 @media only screen and (max-device-width: 480px) {
   body {
     height: 100vh;
+  }
+
+  .username {
+    display: none;
   }
 
   .top-bar {

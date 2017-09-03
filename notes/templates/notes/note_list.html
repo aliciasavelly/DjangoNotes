@@ -4,7 +4,7 @@
 {% block content %}
   <div class="top-bar">
     <div class="left-section">
-      <button onClick="newNote()" class="new-note-button"><p class="no-margin">+</p></button>
+      <button onClick="newNote('{{ user.id }}')" class="new-note-button"><p class="no-margin">+</p></button>
       <div class="colors">
         <button class="choose-main color-picker" onClick="changeNoteColor('#b7fff6')"></button>
         <button class="choose-yellow color-picker" onClick="changeNoteColor('#fdffaa')"></button>
@@ -15,8 +15,9 @@
       </div>
     </div>
 
-    <div class="background-div">
+    <div id="background-div" class="background-div">
       <button class="hamburger" onClick="openBackgroundSection()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+      <p class="username">Hello, {{ user.username }}!</p>
     </div>
   </div>
 

@@ -1,9 +1,10 @@
 NOTES_IDX = 1;
 CURRENT_NOTE_COLOR = "#b7fff6";
 
-function newNote() {
+function newNote(userId) {
+  // debugger;
   $("#notes-section").prepend(
-      `<div id="note-${NOTES_IDX}"
+      `<div id="note-${NOTES_IDX}-${userId}"
             class="note"
             style="background-color:${CURRENT_NOTE_COLOR}">
          <div class="button-holder">
@@ -14,10 +15,11 @@ function newNote() {
                    onClick="deleteNote('note-${NOTES_IDX}')">X
            </button>
          </div>
-       <span id="span-${NOTES_IDX}"
+       <span id="span-${NOTES_IDX}-${userId}"
              placeholder="Type here..."
              onClick="removePlaceholder(this.id)"
              contenteditable='true'></span></div>`);
+
   NOTES_IDX += 1;
 }
 
