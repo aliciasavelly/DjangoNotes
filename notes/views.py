@@ -9,7 +9,8 @@ def note_list(request):
     return render(request, 'notes/note_list.html', {})
 
 def signup(request):
-    if request.method == 'POST':
+    import pdb; pdb.set_trace()
+    if request.method == 'POST' and 'signup' in request.POST:
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
@@ -21,3 +22,9 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
+
+def write_note(request):
+    import pdb; pdb.set_trace()
+    if request.method == 'POST' and 'new-note' in request.POST:
+        import pdb; pdb.set_trace()
+        return redirect('/')

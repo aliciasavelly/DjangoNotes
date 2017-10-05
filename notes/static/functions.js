@@ -23,6 +23,16 @@ function newNote(userId) {
   NOTES_IDX += 1;
 }
 
+function getContent(id) {
+  // debugger;
+  // console.log("hii!!");
+  let note_val = document.getElementById(`span-${id}`).innerHTML;
+  document.getElementById(`note-form-${id}`).value = note_val;
+  // if (note_val === '') {
+  //
+  // }
+}
+
 function deleteNote(id) {
   $(`#${id}`).remove();
 }
